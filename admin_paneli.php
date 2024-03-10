@@ -61,7 +61,7 @@ if ( $dataAdd ) {
 <ol>
 <?php
 
-$dataList = $db -> prepare("SELECT * FROM kategoriler ");
+$dataList = $db -> prepare("SELECT * FROM kategoriler");
 $dataList -> execute();
 $dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
 
