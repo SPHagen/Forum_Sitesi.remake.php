@@ -39,6 +39,7 @@ $data = $db -> prepare("SELECT * FROM konular WHERE
 
 <p>
     <small><?=$_data["konu_tarih"]?></small>
+    <a href="sikayet.php"><br><br><strong>Konuyu Şikayet Et</strong></a>
 </p>
 <hr>
 <p>Yorumlar: </p>
@@ -57,6 +58,7 @@ foreach($dataList as $row){
     '.$row["y_yorum"].'
     </p>
     <small><strong>Tarih: </strong>'.$row["y_tarih"].'</small>
+    <a href="sikayet.php"><br><br><strong>Yorumu Şikayet Et</strong></a>
     <hr>';
 
 }
@@ -97,7 +99,7 @@ $yorum_cek = $yorumcek -> fetch(PDO::FETCH_ASSOC);
     // Yönlendirme yapar.
     header("REFRESH:1;URL=konu.php?link=" . $link . "#yorum" . $yorum_cek["y_id"]);
 } else {
-    echo '<p class="alert alert-danger">Konunuz eklenirken hata oluştu.</p>';
+    echo '<p class="alert alert-danger">Yorumunuz eklenirken hata oluştu.</p>';
     
     header("REFRESH:1;URL=konu.php?link=" . $link . "#yorumyap");
 }
