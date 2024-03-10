@@ -35,6 +35,4 @@ $_data = $data -> fetch(PDO::FETCH_ASSOC);
 	?>
 </ul>
 
-</form>
-
 </center>
