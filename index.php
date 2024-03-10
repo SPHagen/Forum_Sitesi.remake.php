@@ -88,7 +88,6 @@ include 'fonksiyon.php';
 	$dataList -> execute();
 	$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
 	foreach($dataList as $row){
-	/*echo '<li><a href="profil.php?kadi='.$row["uye_kadi"].'</a></li>';*/
 	echo '<li><a href="profil.php?kadi='.$row["uye_kadi"].'"</a>'.$row["uye_kadi"].'<br><br></li>';
 	}
 			?>
