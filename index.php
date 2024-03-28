@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ARMUTLU FORUM</title>
+</head>
+<body>
+
 <?php
 session_start();
 include 'ayar.php';
@@ -5,11 +14,9 @@ include 'ukas.php';
 include 'fonksiyon.php';
 ?>
 
+<?php include 'yin.php'; ?>
 <center>
-<?php include 'ust_bilgi.php'; ?>
-
 <br> <br>
-
 <table border = "1" >
 	<tr>
 		<td>
@@ -64,7 +71,7 @@ include 'fonksiyon.php';
 	</tr>
 	<tr>
 		<td colspan = "2" >
-			<h2> Kategoriler: </h2>
+			<h2> KATEGORİLER </h2>
 
 			<ul>
 			<?php
@@ -95,5 +102,6 @@ include 'fonksiyon.php';
 		</td>
 	</tr>
 </table>
-
 </center>
+</body>
+</html>
