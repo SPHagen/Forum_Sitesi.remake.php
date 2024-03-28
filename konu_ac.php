@@ -23,7 +23,7 @@ $kategori = $_GET["kategori"];
 if ($_POST) {
     $ad     = $_POST["ad"];
     $mesaj  = $_POST["mesaj"];
-    $link = permalink($ad) . "/" . rand(0, 100);
+    $link = permalink($ad) . "/" . rand(0, 100000);
 
     $dataAdd = $db -> prepare("INSERT INTO konular SET
                 konu_ad=?,
