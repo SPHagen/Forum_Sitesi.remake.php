@@ -122,3 +122,17 @@ $_data = $data -> fetch(PDO::FETCH_ASSOC);
 
 return @$_data["k_kategori"];
 }
+
+function uye_ID_to_onay($id)
+{
+    global $db;
+$data = $db -> prepare("SELECT * FROM uyeler WHERE
+  uye_id=?
+");
+$data -> execute([
+  $id
+]);
+$_data = $data -> fetch(PDO::FETCH_ASSOC);
+
+return @$_data["uye_onay"];
+}
