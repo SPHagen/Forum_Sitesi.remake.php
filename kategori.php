@@ -24,7 +24,7 @@ $_data = $data -> fetch(PDO::FETCH_ASSOC);
 
 <ul>
 	<?php
-	$dataList = $db -> prepare("SELECT * FROM konular WHERE konu_kategori_link=? ORDER BY konu_id DESC");
+	$dataList = $db -> prepare("SELECT * FROM konular WHERE k_kategori_link=? ORDER BY konu_id DESC");
 	$dataList -> execute([
 		$q
 	]);
