@@ -125,7 +125,7 @@ return @$_data["k_kategori"];
 
 function uye_ID_to_onay($id)
 {
-    global $db;
+global $db;
 $data = $db -> prepare("SELECT * FROM uyeler WHERE
   uye_id=?
 ");
