@@ -3,105 +3,102 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ARMUTLU FORUM</title>
+	<title>.: Forum Definitive Edition :.</title>
+	<link rel="stylesheet" type="text/css" href="lieh.css">
 </head>
 <body>
+	
+</body>
+</html>
 
 <?php
 session_start();
+ob_start();
+
 include 'ayar.php';
 include 'ukas.php';
 include 'fonksiyon.php';
+include 'ust_bilgi.php';
+
 ?>
 
-<?php include 'yin.php'; ?>
 <center>
-<br> <br>
 <table border = "1" >
 	<tr>
+		<td> <center> <br> <br> YENİ AÇILAN KONULAR <br> <br> <br> </td>
+		<td> <center> <br> <br> KATEGORİLER <br> <br> <br> </td>
+		<td> <center> <br> <br> SON CEVAPLAR <br> <br> <br> </td>
+		<td> <center> <br> <br> SON ÜYE <br> KULLANICILAR <br> <br> <br> </td>
+	</tr>
+	<tr>
 		<td>
-			<strong> Yeni Açılan Konular: </strong><hr>
-			<ul>
 			<?php
 			$dataList = $db -> prepare("SELECT * FROM konular ORDER BY konu_id DESC LIMIT 10");
 			$dataList -> execute();
 			$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
-			foreach($dataList as $row){
-			echo '<li><a href=konu.php?link='.$row["konu_link"].'>'.$row["konu_ad"].'</a></li>';
-		}
-			?>
-			</ul>
-		</td>
-		<td>
-			<strong> Son Cevaplar: </strong><hr>
-			<ul>
-			<?php
-				$dataList = $db -> prepare("SELECT * FROM yorumlar ORDER BY y_id DESC LIMIT 100");
-				$dataList -> execute();
-				$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
-				
-				$konu_idler = [];
+			foreach($dataList as $row) {
+				echo '<center> <strong>';
+				if ($row["k_cozulmemis"] == 1 && $row["k_cozulmus"] == 0) echo '<br> <a href = konu.php?link='.$row["konu_link"].'>
+				'.$row["konu_ad"].'<br> </a> <font color = "Gray" >.:</font> <font color = "Orange" >AÇIK</font> <font color = "Gray" >:.</font> <br> <br>';
+				else if ($row["k_cozulmemis"] == 0 && $row["k_cozulmus"] == 1) echo '<br> <a href = konu.php?link='.$row["konu_link"].'>
+				'.$row["konu_ad"].'<br> </a> <font color = "Gray" >.:</font> <font color = "Green" >ÇÖZÜLDÜ</font> <font color = "Gray" >:.</font> <br> <br>';
+				echo '</strong>   </center>';
 
-				foreach($dataList as $row){
-					array_push( $konu_idler, $row["y_konu_id"] );
-
-				}
-
-				$konu_idler = array_unique( $konu_idler );
-
-				foreach($konu_idler as $konu_id) {
-					$konu_cek = $db -> prepare("SELECT * FROM konular WHERE
-					konu_id=?
-					");
-					$konu_cek -> execute([
-						$konu_id
-					]);
-					$konucek = $konu_cek -> fetch(PDO::FETCH_ASSOC);
-					echo '<li><a href="konu.php?link='.$konucek["konu_link"].'">'.$konucek["konu_ad"].'</a></li>';
-					@$i++;
-					if ($i == 10)
-					{
-						break;
-					}
-
-				}
+			}
 				?>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td colspan = "2" >
-			<h2> KATEGORİLER </h2>
-
-			<ul>
+				</td>
+				
+		<td>
 			<?php
 			$dataList = $db -> prepare("SELECT * FROM kategoriler LIMIT 10");
 			$dataList -> execute();
 			$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
-			foreach($dataList as $row){
-				echo '<li><a href="kategori.php?q='.$row["k_kategori_link"].'">'.$row["k_kategori"].'</a></li>';
+			foreach($dataList as $row) {
+				echo '<center> <strong>';
+				echo '<br> <a href="kategori.php?q='.$row["k_kategori_link"].'"> <strong> .: '.$row["k_kategori"].' :. </strong> <br> <br> <br> </a>';
+				echo '</strong> </center>';
 			}
 			?>
-			</ul>
 		</td>
-	</tr>
-	<tr>
-		<td colspan = "2" >
-			<h2> Son Üye Kullanıcılar: </h2>
-
-			<ul>
+		
+		<td>
 			<?php
-	$dataList = $db -> prepare("SELECT * FROM uyeler ORDER BY uye_id DESC LIMIT 10");
-	$dataList -> execute();
-	$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
-	foreach($dataList as $row){
-	echo '<li><a href="profil.php?kadi='.$row["uye_kadi"].'"</a>'.$row["uye_kadi"].'<br><br></li>';
-	}
+			$dataList = $db -> prepare("SELECT * FROM yorumlar ORDER BY y_id DESC LIMIT 100");
+			$dataList -> execute();
+			$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
+			$Yeni_dizi = [];
+			foreach ($dataList as $dongu) { array_push ($Yeni_dizi, $dongu["y_konu_id"]); }
+			$Yeni_dizi_2 = array_unique ($Yeni_dizi);
+			foreach ($Yeni_dizi_2 as $dongu_2) {
+				$konu_cek = $db -> prepare("SELECT * FROM konular WHERE konu_id=?");
+				$konu_cek -> execute([$dongu_2]);
+				$konucek = $konu_cek -> fetch(PDO::FETCH_ASSOC);
+				echo '<center> <strong>';
+				if ($konucek["k_cozulmemis"] == 1 && $konucek["k_cozulmus"] == 0) echo '<br> <a href="konu.php?link='.$konucek["konu_link"].'">
+				'.$konucek["konu_ad"].'<br> </a> <font color = "Gray" >.:</font> <font color = "Orange" >AÇIK</font> <font color = "Gray" >:.</font> <br> <br>';
+				else if ($konucek["k_cozulmemis"] == 0 && $konucek["k_cozulmus"] == 1) echo '<br> <a href="konu.php?link='.$konucek["konu_link"].'">
+				'.$konucek["konu_ad"].'<br> </a> <font color = "Gray" >.:</font> <font color = "Green" >ÇÖZÜLDÜ</font> <font color = "Gray" >:.</font> <br> <br>';
+				@$i++;
+				if ($i == 10) break;
+				echo '</strong> </center>';
+
+			}
 			?>
-			</ul>
+		</td>
+		
+		<td>
+			<?php
+			$dataList = $db -> prepare("SELECT * FROM uyeler ORDER BY uye_id DESC LIMIT 10");
+			$dataList -> execute();
+			$dataList = $dataList -> fetchALL(PDO::FETCH_ASSOC);
+			foreach($dataList as $row) {
+				echo '<center> <strong>';
+				echo '<br> <a href="profil.php?kadi='.$row["uye_kadi"].'"</a> <font face = "Cascadia Code" > '.$row["uye_kadi"].' </font> <br> <br> <br>';
+				echo '</center> </strong>';
+
+			}
+			?>
 		</td>
 	</tr>
 </table>
-</center>
-</body>
-</html>
+		</center>
