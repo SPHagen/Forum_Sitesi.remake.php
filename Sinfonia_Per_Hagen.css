@@ -1,0 +1,827 @@
+body {
+    Margin : 0px;
+    Background-Color : Beige;
+}
+
+#Yapıcı {
+    Width : 1518px;
+    Height : 737px;
+    Margin : 0px;
+    Padding : 0px;
+}
+
+#Üst {
+    Position : Fixed; Top : 0px; z-index : 1;
+    Margin : 0px;
+    Padding : 0px;
+    Width : 1536px;
+    Height : 150px;
+    Background-Color : rgb(0, 0, 0);
+}
+
+img {
+    Width : 150px;
+    Height : 150px;
+}
+
+Kaplan_Pencesi {
+    Position : Absolute; Left : 75px; Top : 50px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+Foruma_dair_bircok_sey {
+    Position : Absolute; Left : 95px; Top : 80px;
+    Font-Size : 16px;
+    Color : Beige;
+}
+
+Kategori_ismi_konu_ac {
+    Position : Absolute; Left : 75px; Top : 50px;
+    Font-Size : 20px;
+    Color : Beige;
+}
+
+isimli_kategoride_konu_aciniz {
+    Position : Absolute; Left : 75px; Top : 80px;
+    Font-Size : 22px;
+    Color : Beige;
+}
+
+Kategoriler {
+    Position : Absolute; Left : 75px; Top : 60px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+Giris_yap {
+    Position : Absolute; Top : 60px; Left : 1275px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+Kayit_ol {
+    Position : Absolute; Top : 60px; Left : 1400px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+Profilime_git {
+    Position : Absolute; Top : 60px; Left : 1235px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+Cikis_yap {
+    Position : Absolute; Top : 60px; Left : 1400px;
+    Font-Size : 24px;
+    Color : Beige;
+}
+
+a:Link {
+    Text-Decoration : None;
+}
+
+#Merkez {
+    Position : Absolute; Top : 150px;
+    Width : 100%;
+    Height : 587px;
+}
+
+table, tr, td {
+    Border-Collapse : Collapse;
+    Background-Color : Beige;
+}
+
+Kategori_ismi_ek {
+    Font-Size : 24px;
+}
+
+Kategori_ismi {
+    Font-Size : 41px;
+    Color : Beige;
+    Background-Color : Black;
+}
+
+.Butonu_yapilandir {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 16px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+}
+
+.Butonu_yapilandir:Hover {
+    Opacity : 1;
+}
+
+yeni_bir_konu_ac {
+    Font-Size : 24px;
+    Background-Color : rgb(0, 0, 0);
+    Color : Beige;
+}
+
+#input_Text_Konu_Adi {
+    Width : 250px;
+    Height : 35px;
+    -webkit-Transition : Width 0.4s Ease-in-Out;
+    Transition : Width 0.4s Ease-in-Out;
+    Font-Size : 35px;
+}
+
+#input_Text_Konu_Adi:Focus {
+    Width : 920px;
+    Height : 35px;
+    Border : 2;
+}
+
+konunuzun_basligi_ne_olsun {
+    Font-Size : 25px;
+}
+
+textarea {
+    Resize : None;
+    Width : 950px;
+    Height : 250px;
+    Position : Absolute; Left : 233px;
+    Font-Size : 24px;
+}
+
+#Konuyu_Ac {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 16px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Left : 1200px; Top : 165px;
+}
+
+#Konuyu_Ac:Hover {
+    Opacity : 1;
+}
+
+#Sayfayi_Temizle {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 16px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Left : 1200px; Top : 220px;
+}
+
+#Sayfayi_Temizle:Hover {
+    Opacity : 1;
+}
+
+#Konunun_Tarihi_Div {
+    Width : 75%;
+    Height : 27px;
+    Background-Color : #c8e6c9;
+    Position : Relative; Top : 0px;
+}
+
+Konunun_Tarihi {
+    Position : Absolute; Left : 55px;
+    Font-Size : 24px;
+}
+
+#uye_Yorumun_Tarihi_Div {
+    Width : 75%;
+    Height : 27px;
+    Background-Color : #c8e6c9;
+    Position : Relative; Top : -120px;
+}
+
+uye_Yorumun_Tarihi {
+    Position : Absolute; Left : 55px;
+    Font-Size : 24px;
+}
+
+#ks_Konu_Açtı {
+    Width : 75%;
+    Height : 210px;
+    Background-Color : White;
+}
+
+#Üye_Yorum_Yazdı {
+    Background-Color : rgb(255, 221, 193);
+    Width : 75%;
+    Height : 210px;
+    Position : Relative; Top : -120px; Left : 190px;
+}
+
+#Üye_Yorum_Yazdı_Çift {
+    Background-Color : rgb(255, 253, 208);
+    Width : 75%;
+    Height : 210px;
+    Position : Relative; Top : -120px; Left : 190px;
+}
+
+#ks_Hakkında_Tablo {
+    Float : Right;
+    Height : 190px;
+    Font-Size : 20px;
+    Background-Color : White;
+}
+
+#Yorum_Hakkında_Tablo {
+    Float : Right;
+    Height : 208px;
+    Font-Size : 20px;
+    Background-Color : rgb(255, 221, 193);
+}
+
+#Yorum_Hakkında_Tablo_Çift {
+    Float : Right;
+    Height : 208px;
+    Font-Size : 20px;
+    Background-Color : rgb(255, 253, 208);
+}
+
+Konu_Yorumları {
+    Position : Relative; Top : 0px;
+}
+
+ks_Hakkında {
+    Position : Relative; Top : -350px; Right : 190px;
+}
+
+#ks_Konu_Mesajı {
+    Position : Relative;  Top : -170px; Left : 245px;
+    Width : 60%;
+    Height : 112px;
+    Word-Wrap : Break-Word;
+    Font-Size : 22px;
+}
+
+ks_Adı {
+    Position : Relative; Left : 245px; Top : -190px;
+    Font-Size : 24px;
+}
+
+Onaylı_Yeni_Üye {
+    Position : Absolute; Left : 350px; Top : 83px;
+    Font-Size : 24px;
+}
+
+#ksden_Sonrası {
+    Width : 75%;
+    Height : 33px;
+    Background-Color : Black;
+    Font-Size : 24px;
+    Position : Relative; Top : -159px;
+}
+
+#uye_yden_Sonrası {
+    Position : Relative;  Top : -120px;
+    Width : 75%;
+    Height : 33px;
+    Background-Color : Black;
+    Font-Size : 24px;
+}
+
+#uye_yden_Sonrası_Çift {
+    Position : Relative;  Top : -120px;
+    Width : 75%;
+    Height : 33px;
+    Background-Color : Black;
+    Font-Size : 24px;
+}
+
+#Konuyu_Şikayet_Et {
+    Color : Beige;
+    Position : Absolute; Left : 41px;
+    Font-Size : 28px;
+}
+
+#Yorumu_Şikayet_Et {
+    Color : Beige;
+    Position : Absolute; Right : 41px;
+    Font-Size : 28px;
+}
+
+Yorumlar {
+    Font-Size : 40px;
+    Color : Beige;
+    Position : Absolute; Left : 450px;
+}
+
+#Alt {
+    Width : 100%;
+    Height : 75px;
+    Background-Color : rgb(0, 0, 0);
+    Position : Fixed; Bottom : 0; z-index : 1;
+}
+
+y_uye {
+    Position : Relative; Left : 57px; Top : 22px;
+    Font-Size : 26px;
+}
+
+#Yorum_Divi {
+    Position : Relative; Top : 40px; Left : 55px;
+    Width : 80%;
+    Height : 112px;
+    Word-Wrap : Break-Word;
+    Font-Size : 20px;
+}
+
+Konuyu_Kapat {
+    Color : Beige;
+    Position : Absolute; Left : 41px;
+    Font-Size : 28px;
+}
+
+Konu_Kapatildi {
+    Color : YellowGreen;
+    Position : Absolute; Left : 41px;
+    Font-Size : 28px;
+}
+
+/* ..:: RÜTBELER ::.. */
+
+Onaylı {
+    Color : Lime;
+}
+
+Yeni_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+Deneyimli_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+Caliskan_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+Basarili_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+Emektar_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+Efsane_Üye {
+    Background-Color : Black;
+    Color : Beige;
+}
+
+/* ..:: RÜTBELER ::.. */
+
+#Yorumu_Yayınla {
+    background-color: White;
+    Color : rgb(0, 0, 0);
+    Font-Size : 18px;
+    Position : Absolute; Left : 0px;
+}
+
+#Yorumu_Yayınla_Buton {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Top : -4px; Right : 0px;
+}
+
+#Yorumu_Yayınla_Buton:hover {
+    Opacity : 1;
+}
+
+#Yorumu_Temizle_Buton {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Top : 83px; Right : -2px;
+}
+
+#Yorumu_Temizle_Buton:hover {
+    Opacity : 1;
+}
+
+#_Yorum {
+    Position : Relative; Bottom : 120px; Left : 190px;
+    Width : 75%;
+    Height : 162px;
+}
+
+#Yorum_Yapamiyorsunuz {
+    Position : Relative; Bottom : 120px; Left : 190px;
+    Width : 75%;
+    Height : 27px;
+    Font-Size : 28px;
+}
+
+#Yorum_Atan_Kullanıcılar {
+    Border-Collapse : Collapse;
+    Position : Relative; Left : 657px;
+}
+
+#Yorum_Atan_Kullanıcılar_ek {
+    Padding : 16px 32px;
+}
+
+Giriş_Yapınız_veya_Kayıt_Olunuz {
+    Color : Beige;
+    Position : Absolute; Left : 41px;
+    Font-Size : 28px;
+}
+
+Giriş_Yapınız_veya_Kayıt_Olunuz_Yorum {
+    Color : Beige;
+    Position : Absolute; Right : 41px;
+    Font-Size : 28px;
+}
+
+#Link_Rengi_Değiştirme {
+    Color : LightSkyBlue;
+}
+
+a {
+    Color : Blue;
+}
+
+input[type=checkbox] {
+    -webkit-transform : Scale(2);
+}
+
+#Rep_Puanı_Verin_Ve_Konuyu_Kapatın {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Relative; Left : 657px;
+}
+
+#Rep_Puanı_Verin_Ve_Konuyu_Kapatın:hover {
+    Opacity : 1;
+}
+
+#Konuyu_Kendim_Çözdüm {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Relative; Left : 657px;
+}
+
+#Konuyu_Kendim_Çözdüm:hover {
+    Opacity : 1;
+}
+
+#Profil_Bilgileri {
+    Width : 50%;
+    Height : 118px;
+    Background-Color : #2b2e41;
+    Position : Absolute; Left : 193px;
+}
+
+Kullanici_Adi {
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+    Color : rgb(255, 255, 255);
+}
+
+Yeni_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Onaylı_Profil {
+    Color : Green;
+}
+
+Deneyimli_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Caliskan_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Basarili_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Emektar_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Efsane_Üye_Profil {
+    Color : White;
+    Font-Size : 28px;
+    Position : Absolute; Left : 41px; Top : 40px;
+}
+
+Uye_Ad_Soyad {
+   Font-Size : 28px;
+}
+
+#Profil_Bilgileri_2 {
+    Background-Color : White;
+    Width : 25%;
+    Height : 424px;
+    Position : Absolute; Top : 178px; Left : 193px;
+}
+
+#Üye_Bilgileri {
+    Background-Color : #2b2e41;
+    Height : 15%;
+    Font-Size : 20px;
+    Color : White;
+}
+
+Uye_Bilgileri {
+    Position : Absolute; Top : 20px; Left : 25px;
+}
+
+#Üye_İstatistikleri {
+    Background-Color : White;
+    Width : 50%;
+    Position : Absolute; Right : 186px; Top : 178px;
+    Height : 424px;
+}
+
+#Bu_Kullanıcının_Seviyesi_Nedir {
+    Background-Color : #2b2e41;
+    Width : 50%;
+    Height : 118px;
+    Position : Absolute; Top : 0px; Right : -380px;
+}
+
+Kullaniciyi_Sikayet_Et {
+    Position : Absolute; Right : 41px; Top : 40px;
+    Font-Size : 28px;
+}
+
+#İstatistikler_Detay {
+    Background-Color : #2b2e41;
+    Height : 15%;
+    Font-Size : 20px;
+    Color : White;
+}
+
+#Toplam_Konu_Sayısı {
+    Margin-Top : 15px;
+    Margin-Left : 35px;
+    Width : 45%;
+    Height : 20%;
+    Float : Left;
+    Border-Right-Style : Groove;
+    Font-Size : 18px;
+}
+
+Actigi_Konu_Sayisi {
+    Font-Size : 18px;
+    Position : Absolute; Left : 125px; Top : 100px;
+}
+
+Toplam_Yorum_Sayisi {
+    Font-Size : 18px;
+    Position : Absolute; Right : 125px; Top : 100px;
+}
+
+#Toplam_Yorum_Sayısı {
+    Margin-Top : 15px;
+    Margin-Right : 36px;
+    Width : 45%;
+    Height : 20%;
+    Float : Right;
+    Font-Size : 18px;
+}
+
+#Son_Konu {
+    Margin-Top : 15px;
+    Margin-Left : 36px;
+    Width : 45%;
+    Height : 20%;
+    Float : Left;
+    Border-Right-Style : Groove;
+    Font-Size : 18px;
+}
+
+#Son_Yorum {
+    Margin-Top : 15px;
+    Margin-Right : 35px;
+    Width : 45%;
+    Height : 20%;
+    Float : Right;
+    Font-Size : 18px;
+}
+
+Uyelik_Tarihi_Profil {
+    Color : White;
+    Position : Absolute; Left : 18px; Top : 45px;
+}
+
+#Sikayet_Mesaji {
+    Resize : None;
+    Width : 1000px;
+    Height : 250px;
+    Font-Size : 18px;
+    Position : Absolute; Top : 300px;
+    Border-Color : #2b2e41;
+}
+
+#Şikayet_Bilgileri {
+    Width : 20%;
+    Height : 234px;
+    Background-Color : White;
+    Position : Absolute; Left : 233px;
+    Font-Size : 20px;
+    Color : #2b2e41;
+}
+
+#Şikayeti_Gönder {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Top : 34px; Left : 745px;
+}
+
+#Şikayeti_Gönder:hover {
+    Opacity : 1;
+}
+
+#Şikayeti_Temizle {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Top : 34px; Left : 550px;
+}
+
+#Şikayeti_Temizle:hover {
+    Opacity : 1;
+}
+
+Sikayetiniz_Gonderildi {
+    Position : Absolute; Top : 30px; Left : 945px;
+}
+
+#Sikayet_Edilen_Konu {
+    Background-Color : #2b2e41;
+    Width : 32%;
+    Height : 27px;
+    Font-Size : 22px;
+    Color : White;
+}
+
+#Sikayeti_Gonderen_Kullanici {
+    Background-Color : White;
+    Width : 32%;
+    Height : 27px;
+    Font-Size : 22px;
+    Color : #2b2e41;
+}
+
+#Sikayet_Tarihi {
+    Background-Color : #c8e6c9;
+    Width : 32%;
+    Height : 27px;
+    Font-Size : 22px;
+    Color : #2b2e41;
+}
+
+#Sikayetk_Mesaji {
+    Background-Color : White;
+    Width : 32%;
+    Height : 270px;
+    Font-Size : 22px;
+    Color : #2b2e41;
+    Word-Wrap : Break-Word;
+}
+
+#Konuyu_Tumuyle_Kaldirin {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Left : 521px;
+}
+
+#Konuyu_Tumuyle_Kaldirin:hover {
+    Opacity : 1;
+}
+
+#Konu_Buton {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+    Position : Absolute; Left : 781px; Bottom : 66px;
+}
+
+#Konu_Buton:hover {
+    Opacity : 1;
+}
+
+#Buton_giris_yap {
+    Background-Color : rgb(0, 0, 0);
+    Border : None;
+    Color : Beige;
+    Padding : 16px 32px;
+    Font-Size : 17px;
+    Margin : 4px 2px;
+    Opacity : 0.6;
+    Transition : 0.3s;
+    Display : inline-Block;
+    Text-Decoration : None;
+    Cursor : Pointer;
+}
+
+#Buton_giris_yap:hover {
+    Opacity : 1;
+}
