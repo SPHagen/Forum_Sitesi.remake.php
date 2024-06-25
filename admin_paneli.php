@@ -4,16 +4,13 @@ include 'ayar.php';
 include 'ukas.php';
 include 'fonksiyon.php';
 
-if (@$_SESSION['uye_onay'] !== 1 )
-{
-    echo '<center><h1>Yönetici değilsiniz! Panele erişemezsiniz!</h1><center>';
+if (@$_SESSION['uye_onay'] !== 1 ) {
+    echo '<center><h1>Yetkili Olmadığınız Sebebiyle Panele Erişemezsiniz!</h1></center>';
     exit;
 }
 ?>
 
 <center>
-<?php include 'ust_bilgi.php'; ?>
-
 <br> <br>
 
 <h2> Admin Paneli </h2>
