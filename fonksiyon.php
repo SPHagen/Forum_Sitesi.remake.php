@@ -97,7 +97,9 @@ return @$_data["uye_adsoyad"];
 
 function uye_ID_to_kadi($id)
 {
-    global $db;
+
+global $db;
+
 $data = $db -> prepare("SELECT * FROM uyeler WHERE
   uye_id=?
 ");
